@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_select_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/selecione_numero_jogadores"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txt_select_op_jogada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/selecione_numero_jogos"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/op_dois" />
+
+    <RadioButton
+        android:id="@+id/op_uma_jogada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:checked="true"
+        android:text="@string/_1_jogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_select_op_jogada" />
+
+    <RadioButton
+        android:id="@+id/op_cinco_jogada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_weight="1"
+        android:text="@string/_5_jogos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_select_op_jogada" />
+
+    <RadioButton
+        android:id="@+id/op_tres_jogada"
+        android:layout_width="103dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:text="@string/_3_jogos"
+        app:layout_constraintEnd_toStartOf="@+id/op_cinco_jogada"
+        app:layout_constraintStart_toEndOf="@+id/op_uma_jogada"
+        app:layout_constraintTop_toTopOf="@+id/op_uma_jogada" />
+
+    <RadioButton
+        android:id="@+id/op_tres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:checked="true"
+        android:text="@string/_3_jogadores"
+        app:layout_constraintEnd_toEndOf="@+id/txt_select_op"
+        app:layout_constraintTop_toTopOf="@+id/op_dois" />
+
+    <RadioButton
+        android:id="@+id/op_dois"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:text="@string/_2_jogadores"
+        app:layout_constraintStart_toStartOf="@+id/txt_select_op"
+        app:layout_constraintTop_toBottomOf="@+id/txt_select_op" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
