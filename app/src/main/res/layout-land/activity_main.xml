@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/opcoesJogadores"
@@ -45,6 +45,39 @@
                 android:layout_weight="1"
                 android:checked="true"
                 android:text="@string/_3_jogadores"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txt_select_op_jogada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selecione_numero_jogos"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/opcaoRadioGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/op_uma_jogada"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/_1_jogo"/>
+            <RadioButton
+                android:id="@+id/op_tres_jogada"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/_3_jogos"/>
+            <RadioButton
+                android:id="@+id/op_cinco_jogada"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/_5_jogos"/>
         </RadioGroup>
     </LinearLayout>
 

@@ -8,4 +8,9 @@
     <string name="selecione_numero_jogadores">Selecione o número de jogadores</string>
     <string name="_2_jogadores">2 Jogadores</string>
     <string name="_3_jogadores">3 Jogadores</string>
+    <string name="selecione_numero_jogos">Selecione o número de jogos:</string>
+    <string name="_1_jogo">1 Jogo</string>
+    <string name="_3_jogos">3 Jogos</string>
+    <string name="_5_jogos">5 Jogos</string>
+    <string name="opces">Opções</string>
 </resources>

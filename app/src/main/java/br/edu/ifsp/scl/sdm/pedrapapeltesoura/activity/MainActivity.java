@@ -1,13 +1,21 @@
-package br.edu.ifsp.scl.sdm.pedrapapeltesoura;
+package br.edu.ifsp.scl.sdm.pedrapapeltesoura.activity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
+import br.edu.ifsp.scl.sdm.pedrapapeltesoura.OpcaoDoisJogadores;
+import br.edu.ifsp.scl.sdm.pedrapapeltesoura.OpcaoTresJogadores;
+import br.edu.ifsp.scl.sdm.pedrapapeltesoura.Opcoes;
+import br.edu.ifsp.scl.sdm.pedrapapeltesoura.R;
 import br.edu.ifsp.scl.sdm.pedrapapeltesoura.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -35,6 +43,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         activityMainBinding.opcoesJogadores.setOnCheckedChangeListener((__, mostrarOpcoes) -> {
             activityMainBinding.selecinarOpcaoLl.setVisibility(mostrarOpcoes ? View.VISIBLE : View.GONE);
         });
+    }
+
+    /**
+     * Menu Opções
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_opcoes, menu);
+        return true;
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.opt_opcoes) {
+            Intent intent = new Intent(this, OpcoesActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /**
